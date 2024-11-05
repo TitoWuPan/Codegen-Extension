@@ -1,0 +1,55 @@
+{
+  "name": "CODEGEN-P20241003",
+  "displayName": "CODEGEN-P20241003",
+  "description": "CODEGEN: MODELO GENERATIVO PARA LA PREDICCIÓN DE CÓDIGO EN PROYECTOS DE MACHINE LEARNING BASADO EN LA ARQUITECTURA TRANSFORMER GPT-2",
+  "version": "0.0.7",
+  "publisher": "TitoPengWuPan",
+  "engines": {
+    "vscode": "^1.80.2"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "codeGeneratorView",
+          "name": "Generar Código"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.activateCodeGenerator",
+        "title": "Activate Code Generator View"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.80.2",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "license": "LICENSE.txt",
+  "dependencies": {
+    "@vscode/vsce": "^3.1.0",
+    "axios": "^1.7.7"
+  }
+}
